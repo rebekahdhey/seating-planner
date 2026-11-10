@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+
+  --color-ivory: #fbf7ef;
+  --color-blush: #f4d6dc;
+  --color-powder: #cfe0ee;
+  --color-gold: #b8913f;
+  --color-ink: #3b2f2f;
+  --color-danger: #c0485a;
+}
+
+body {
+  @apply bg-ivory font-body text-ink antialiased;
+}
+
+h1,
+h2,
+h3 {
+  @apply font-display;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
